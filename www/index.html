@@ -188,11 +188,14 @@
     function btnAClick(e){
         active=true;
         startTime=new Date();
+        $("#btnA").css("background-color", "lightblue");
     }
 
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
         active=false;
+
+        $("#btnB").css("background-color", "yellow");
     }
 
     // ButtonCがクリックされた時の処理
@@ -203,6 +206,8 @@
         period=60*parseInt($("#minute").val())+parseInt($("#second").val());
         $("#time").html("経過時間：0");
         $("#remain").html("残り時間："+period);
+
+        $("#btnC").css("background-color", "red");
     }
 
     // ButtonDがクリックされた時の処理
